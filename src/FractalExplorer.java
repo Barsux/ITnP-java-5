@@ -24,6 +24,7 @@ public class FractalExplorer {
    class MouseHandler extends MouseAdapter {
       @Override
       public void mouseClicked(MouseEvent e) {
+         display.clearImage();
          int x = e.getX();
          double xCoord = FractalGenerator.getCoord(range.x, range.x + range.width, displaySize, x);
          int y = e.getY();
