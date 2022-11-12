@@ -1,8 +1,8 @@
 import java.awt.geom.Rectangle2D;
 
 //Класс фрактала множества мандельброта, наследуемый от генератора фракталов
-public class Mandelbrot extends FractalGenerator{
-    private static final String NAME = "Mandelbrot";
+public class BurningShip extends FractalGenerator{
+    private static final String NAME = "Burning Ship";
     //Константа с максимальным количеством итераций
     public static final int MAX_ITERATIONS = 2000;
     //Переопределение метода для получения исходного диапазона на определённое комп.число
@@ -23,7 +23,7 @@ public class Mandelbrot extends FractalGenerator{
         double zimaginary2 = 0;
         while(iteration < MAX_ITERATIONS && (zreal2 + zreal2) < 4)
         {
-            zimaginary = (2 * zreal * zimaginary) + y;
+            zimaginary = Math.abs((2 * zreal * zimaginary)) + y;
             zreal = (zreal2 - zimaginary2) + x;
 
             zreal2 = zreal*zreal;
@@ -37,6 +37,6 @@ public class Mandelbrot extends FractalGenerator{
     }
 
     public String toString() {
-        return NAME;
+        return "Burning Ship";
     }
 }
